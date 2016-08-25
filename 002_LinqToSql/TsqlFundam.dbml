@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TSQLFundamentals2008" Class="TsqlFundamDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=BOGDAN-ПК;Initial Catalog=TSQLFundamentals2008;Integrated Security=True" SettingsObjectName="_002_LinqToSql.Properties.Settings" SettingsPropertyName="TSQLFundamentals2008ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="HR.Employees" Member="Employees">
+    <Type Name="Employee">
+      <Column Name="empid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="lastname" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="firstname" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="titleofcourtesy" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="birthdate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="hiredate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="address" Type="System.String" DbType="NVarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="city" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="region" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="postalcode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="phone" Type="System.String" DbType="NVarChar(24) NOT NULL" CanBeNull="false" />
+      <Column Name="mgrid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Employee_Employee" Member="Employees" ThisKey="empid" OtherKey="mgrid" Type="Employee" />
+      <Association Name="Employee_Order" Member="Orders" ThisKey="empid" OtherKey="empid" Type="Order" />
+      <Association Name="Employee_Employee" Member="Employee1" ThisKey="mgrid" OtherKey="empid" Type="Employee" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Production.Categories" Member="Categories">
+    <Type Name="Category">
+      <Column Name="categoryid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="categoryname" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Association Name="Category_Product" Member="Products" ThisKey="categoryid" OtherKey="categoryid" Type="Product" />
+    </Type>
+  </Table>
+  <Table Name="Production.Products" Member="Products">
+    <Type Name="Product">
+      <Column Name="productid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="productname" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="supplierid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="categoryid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="unitprice" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="discontinued" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Product_OrderDetail" Member="OrderDetails" ThisKey="productid" OtherKey="productid" Type="OrderDetail" />
+      <Association Name="Category_Product" Member="Category" ThisKey="categoryid" OtherKey="categoryid" Type="Category" IsForeignKey="true" />
+      <Association Name="Supplier_Product" Member="Supplier" ThisKey="supplierid" OtherKey="supplierid" Type="Supplier" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Production.Suppliers" Member="Suppliers">
+    <Type Name="Supplier">
+      <Column Name="supplierid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="companyname" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="contactname" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="contacttitle" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="address" Type="System.String" DbType="NVarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="city" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="region" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="postalcode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="phone" Type="System.String" DbType="NVarChar(24) NOT NULL" CanBeNull="false" />
+      <Column Name="fax" Type="System.String" DbType="NVarChar(24)" CanBeNull="true" />
+      <Association Name="Supplier_Product" Member="Products" ThisKey="supplierid" OtherKey="supplierid" Type="Product" />
+    </Type>
+  </Table>
+  <Table Name="Sales.Customers" Member="Customers">
+    <Type Name="Customer">
+      <Column Name="custid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="companyname" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="contactname" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="contacttitle" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="address" Type="System.String" DbType="NVarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="city" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="region" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="postalcode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="phone" Type="System.String" DbType="NVarChar(24) NOT NULL" CanBeNull="false" />
+      <Column Name="fax" Type="System.String" DbType="NVarChar(24)" CanBeNull="true" />
+      <Association Name="Customer_Order" Member="Orders" ThisKey="custid" OtherKey="custid" Type="Order" />
+    </Type>
+  </Table>
+  <Table Name="Sales.OrderDetails" Member="OrderDetails">
+    <Type Name="OrderDetail">
+      <Column Name="orderid" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="productid" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="unitprice" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="qty" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="discount" Type="System.Decimal" DbType="Decimal(4,3) NOT NULL" CanBeNull="false" />
+      <Association Name="Product_OrderDetail" Member="Product" ThisKey="productid" OtherKey="productid" Type="Product" IsForeignKey="true" />
+      <Association Name="Order_OrderDetail" Member="Order" ThisKey="orderid" OtherKey="orderid" Type="Order" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Sales.Orders" Member="Orders">
+    <Type Name="Order">
+      <Column Name="orderid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="custid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="empid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="orderdate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="requireddate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="shippeddate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="shipperid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="freight" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="shipname" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="shipaddress" Type="System.String" DbType="NVarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="shipcity" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="shipregion" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="shippostalcode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="shipcountry" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Association Name="Order_OrderDetail" Member="OrderDetails" ThisKey="orderid" OtherKey="orderid" Type="OrderDetail" />
+      <Association Name="Customer_Order" Member="Customer" ThisKey="custid" OtherKey="custid" Type="Customer" IsForeignKey="true" />
+      <Association Name="Employee_Order" Member="Employee" ThisKey="empid" OtherKey="empid" Type="Employee" IsForeignKey="true" />
+      <Association Name="Shipper_Order" Member="Shipper" ThisKey="shipperid" OtherKey="shipperid" Type="Shipper" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Sales.Shippers" Member="Shippers">
+    <Type Name="Shipper">
+      <Column Name="shipperid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="companyname" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="phone" Type="System.String" DbType="NVarChar(24) NOT NULL" CanBeNull="false" />
+      <Association Name="Shipper_Order" Member="Orders" ThisKey="shipperid" OtherKey="shipperid" Type="Order" />
+    </Type>
+  </Table>
+  <Table Name="Sales.Nums" Member="Nums">
+    <Type Name="Num">
+      <Column Name="n" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="Production.fn_TopProducts" Method="fn_TopProducts" IsComposable="true">
+    <Parameter Name="supid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="n" Type="System.Int32" DbType="Int" />
+    <ElementType Name="fn_TopProductsResult">
+      <Column Name="productid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="productname" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="unitprice" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

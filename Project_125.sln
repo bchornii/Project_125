@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "001_LinqIntroduction", "001_LinqIntroduction\001_LinqIntroduction.csproj", "{05EAFEAD-5272-415B-8432-F0F769F3D1D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{71F84AC3-DB62-4736-83E0-D081C46E7B14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "002_LinqToSql", "002_LinqToSql\002_LinqToSql.csproj", "{F71F5DC8-A804-4752-9702-A51373943B67}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05EAFEAD-5272-415B-8432-F0F769F3D1D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05EAFEAD-5272-415B-8432-F0F769F3D1D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05EAFEAD-5272-415B-8432-F0F769F3D1D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05EAFEAD-5272-415B-8432-F0F769F3D1D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71F84AC3-DB62-4736-83E0-D081C46E7B14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71F84AC3-DB62-4736-83E0-D081C46E7B14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71F84AC3-DB62-4736-83E0-D081C46E7B14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71F84AC3-DB62-4736-83E0-D081C46E7B14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F71F5DC8-A804-4752-9702-A51373943B67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F71F5DC8-A804-4752-9702-A51373943B67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F71F5DC8-A804-4752-9702-A51373943B67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F71F5DC8-A804-4752-9702-A51373943B67}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

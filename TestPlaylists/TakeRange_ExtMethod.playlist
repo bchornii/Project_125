@@ -1,0 +1,1 @@
+<Playlist Version="1.0"><Add Test="Tests.TakeRangeTest.NormalSourceTest" /><Add Test="Tests.TakeRangeTest.NormalSourceWithTwoBondariesTest" /><Add Test="Tests.TakeRangeTest.NullSourceTest" /><Add Test="Tests.TakeRangeTest.NullStartPredicateException" /><Add Test="Tests.TakeRangeTest.NullEndPredicateException" /><Add Test="Tests.TakeRangeTest.ElementEqualsTest" /></Playlist>

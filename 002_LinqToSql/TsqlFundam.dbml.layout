@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 20.625, 12.375" name="TsqlFundam">
+  <DataContextMoniker Name="/TsqlFundamDataContext" />
+  <nestedChildShapes>
+    <classShape Id="312f0303-e59c-4296-8267-7d36ec06a622" absoluteBounds="9.25, 2.125, 2, 3.5016097005208309">
+      <DataClassMoniker Name="/TsqlFundamDataContext/Employee" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4a086045-37f3-4723-8705-47ea5d2df9d5" absoluteBounds="9.265, 2.5850000000000009, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a4c7a77c-57e4-48d3-859f-579692b1a1c1" absoluteBounds="11.5, 6.75, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/TsqlFundamDataContext/Category" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4253f93d-c9fb-4b37-a5ad-43dc914989c0" absoluteBounds="11.515, 7.2100000000000009, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f554c0fc-1dd5-4062-8876-696c45d1ea34" absoluteBounds="15.625, 6.5, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/TsqlFundamDataContext/Product" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a21e6822-3059-4b05-9647-9d142d51fdf4" absoluteBounds="15.64, 6.9600000000000009, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1f6869c3-6cb3-4346-ac82-688421ca37d5" absoluteBounds="15.625, 9.25, 2, 2.9247054036458309">
+      <DataClassMoniker Name="/TsqlFundamDataContext/Supplier" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0eb59718-18c4-42f7-9b67-00d2509021e0" absoluteBounds="15.64, 9.71, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a3d09938-118c-4599-8c7a-51f60b50c11e" absoluteBounds="11.625, 3.375, 2, 2.9247054036458326">
+      <DataClassMoniker Name="/TsqlFundamDataContext/Customer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bf0ebee1-93a7-4125-b64d-fe8c1b64b3a6" absoluteBounds="11.64, 3.8350000000000009, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a54daee5-aba5-42e1-b345-50ee97c8ad2d" absoluteBounds="18.375, 3.125, 2, 1.7708968098958329">
+      <DataClassMoniker Name="/TsqlFundamDataContext/OrderDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5eb6b790-a5be-48dc-a718-1084a6c0c813" absoluteBounds="18.39, 3.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7a997134-3d3e-4fa6-ac51-0b41b5ae5b28" absoluteBounds="15.625, 2.25, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/TsqlFundamDataContext/Order" />
+      <nestedChildShapes>
+        <elementListCompartment Id="46ee9a32-874c-43f9-880a-c1e2bb1fb554" absoluteBounds="15.64, 2.71, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c9c2ebe0-67d7-44aa-9c1e-35bf21f40ec2" absoluteBounds="15.625, 0.5, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/TsqlFundamDataContext/Shipper" />
+      <nestedChildShapes>
+        <elementListCompartment Id="56565746-b20f-49ee-812d-bee380396e26" absoluteBounds="15.64, 0.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(9.95923076923077 : 5.62660970052083); (9.95923076923077 : 5.87660970052083); (10.5546153846154 : 5.87660970052083); (10.5546153846154 : 5.62660970052083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/TsqlFundamDataContext/Employee/Employee_Employee" />
+      <nodes>
+        <classShapeMoniker Id="312f0303-e59c-4296-8267-7d36ec06a622" />
+        <classShapeMoniker Id="312f0303-e59c-4296-8267-7d36ec06a622" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.5 : 7.44314697265625); (15.625 : 7.44314697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/TsqlFundamDataContext/Category/Category_Product" />
+      <nodes>
+        <classShapeMoniker Id="a4c7a77c-57e4-48d3-859f-579692b1a1c1" />
+        <classShapeMoniker Id="f554c0fc-1dd5-4062-8876-696c45d1ea34" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(16.625 : 9.25); (16.625 : 8.4631982421875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/TsqlFundamDataContext/Supplier/Supplier_Product" />
+      <nodes>
+        <classShapeMoniker Id="1f6869c3-6cb3-4346-ac82-688421ca37d5" />
+        <classShapeMoniker Id="f554c0fc-1dd5-4062-8876-696c45d1ea34" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(17.625 : 7.48159912109375); (19.375 : 7.48159912109375); (19.375 : 4.89589680989583)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/TsqlFundamDataContext/Product/Product_OrderDetail" />
+      <nodes>
+        <classShapeMoniker Id="f554c0fc-1dd5-4062-8876-696c45d1ea34" />
+        <classShapeMoniker Id="a54daee5-aba5-42e1-b345-50ee97c8ad2d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(17.625 : 4.01044840494792); (18.375 : 4.01044840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/TsqlFundamDataContext/Order/Order_OrderDetail" />
+      <nodes>
+        <classShapeMoniker Id="7a997134-3d3e-4fa6-ac51-0b41b5ae5b28" />
+        <classShapeMoniker Id="a54daee5-aba5-42e1-b345-50ee97c8ad2d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.625 : 4.56330485026042); (15.625 : 4.56330485026042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/TsqlFundamDataContext/Customer/Customer_Order" />
+      <nodes>
+        <classShapeMoniker Id="a3d09938-118c-4599-8c7a-51f60b50c11e" />
+        <classShapeMoniker Id="7a997134-3d3e-4fa6-ac51-0b41b5ae5b28" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 2.93834554036458); (15.625 : 2.93834554036458)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TsqlFundamDataContext/Employee/Employee_Order" />
+      <nodes>
+        <classShapeMoniker Id="312f0303-e59c-4296-8267-7d36ec06a622" />
+        <classShapeMoniker Id="7a997134-3d3e-4fa6-ac51-0b41b5ae5b28" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(16.625 : 1.8862939453125); (16.625 : 2.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/TsqlFundamDataContext/Shipper/Shipper_Order" />
+      <nodes>
+        <classShapeMoniker Id="c9c2ebe0-67d7-44aa-9c1e-35bf21f40ec2" />
+        <classShapeMoniker Id="7a997134-3d3e-4fa6-ac51-0b41b5ae5b28" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="19a7519a-47b8-4513-bc5c-805efb947757" absoluteBounds="12.375, 1.125, 2, 1.0016910807291668">
+      <DataClassMoniker Name="/TsqlFundamDataContext/Num" />
+      <nestedChildShapes>
+        <elementListCompartment Id="57cc2287-c812-4ed6-a87e-7e64487ac3ae" absoluteBounds="12.39, 1.585, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
